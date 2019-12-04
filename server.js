@@ -17,3 +17,6 @@ app.get("*", function(req, res) {
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+//Conect to mongodb
+mongoose.connect(process.env).MONGODB_URI || "mongodb://santa:elfshoes5@ds251948.mlab.com:51948/heroku_cdbzhz27"
