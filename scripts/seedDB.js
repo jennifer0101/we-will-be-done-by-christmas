@@ -14,6 +14,7 @@ mongoose.connect(
 
 const userSeed =[
 {  
+    image: "../client/public/images/orangejuice.jpg",
     owner: "Travis",
     item: "Orange Juice",
     amount: ".25 Gallon",
@@ -22,6 +23,7 @@ const userSeed =[
     note: "I don't drink from the carton!!!" 
 },
 {
+    image: "../client/public/images/cheddar.jpg",
     owner: "Phelan",
     item: "Cheddar Cheese",
     amount: "1 pound",
@@ -30,6 +32,7 @@ const userSeed =[
     note: ""
 },
 {
+    image: "../client/public/images/lettuce",
     owner: "Matt",
     item: "Romaine Lettuce",
     amount: ".5 lbs",
@@ -38,6 +41,7 @@ const userSeed =[
     note: "NOT PART OF THE RECALL"
 },
 {
+    image: "../client/public/images/tomatoes",
     owner: "Jean",
     item: "Fresh Tomatos",
     amount: "3 pounds",
@@ -46,6 +50,7 @@ const userSeed =[
     note: ""
 },
 {
+    image: "../client/public/images/candy.jpg",
     owner: "Aaron",
     item: "Halloween Candy",
     amount: "1 pound",
