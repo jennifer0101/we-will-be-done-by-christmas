@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+//const mongoose = require("mongoose");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -19,4 +20,4 @@ app.listen(PORT, function() {
 });
 
 //Conect to mongodb
-mongoose.connect(process.env).MONGODB_URI || "mongodb://santa:elfshoes5@ds251948.mlab.com:51948/heroku_cdbzhz27"
+//mongoose.connect(process.env).MONGODB_URI || "mongodb://santa:elfshoes5@ds251948.mlab.com:51948/heroku_cdbzhz27"
