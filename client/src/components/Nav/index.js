@@ -30,6 +30,22 @@ function Nav() {
                             Search Items
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link
+                        to="/addItems"
+                        className={window.location.pathname === "/addItems" ? "nav-link active" : "nav-link"}
+                        >
+                            Add Items
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                        to="/inviteFriends"
+                        className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
+                        >
+                            Invite Friends
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>
