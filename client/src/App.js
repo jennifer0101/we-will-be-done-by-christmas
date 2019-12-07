@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import home from "./pages/home";
 import search from "./pages/search";
+import addItems from "./pages/addItems";
+import inviteFriends from "./pages/inviteFriends";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import NavBar from "./components/NavBar";
@@ -19,16 +21,20 @@ function App() {
     <Router>
       <div>
         <NavBar />
+
         { isAuthenticated &&
           <div>
             <Nav />
             <Wrapper>
               <Route exact path="/" component={home} />
               <Route exact path="/search" component={search} />
+              <Route exact path="/addItems" component={addItems} />
+              <Route exact path="/inviteFriends" component={inviteFriends} />
             </Wrapper>
           </div>
         }
-        
+
+       
       </div>
     </Router>
   );
