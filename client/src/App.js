@@ -9,7 +9,7 @@ import { useAuth0 } from "./react-auth0-spa";
 
 
 function App() {
-  const { loading } = useAuth0();
+  const { isAuthenticated, loading } = useAuth0();
 
   if (loading) {
     return <div>Loading...</div>;
@@ -19,11 +19,16 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        <Nav />
-        <Wrapper>
-          <Route exact path="/" component={home} />
-          <Route exact path="/search" component={search} />
-        </Wrapper>
+        { isAuthenticated &&
+          <div>
+            <Nav />
+            <Wrapper>
+              <Route exact path="/" component={home} />
+              <Route exact path="/search" component={search} />
+            </Wrapper>
+          </div>
+        }
+        
       </div>
     </Router>
   );
