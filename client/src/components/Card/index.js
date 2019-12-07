@@ -10,12 +10,26 @@ function Card(props) {
         <div className="content">
             <ul>
                 <li>
-                    <strong>Item Name:</strong>
+                    <strong>Item Name: {props.itemName}</strong>
                 </li>
                 <li>
-                    
+                    <strong>Amount of Item: {props.amount}</strong>
+                </li>
+                <li>
+                    <strong>Date of Expiration: {props.expiration}</strong>
+                </li>
+
+                <li>
+                    <strong>Must Take By: {props.takeBy}</strong>
+                </li>
+                <li>
+                    <strong>Note: {props.note}</strong>
+                </li>
+                <li>
+                    <strong>Contact: {props.contact}</strong>
                 </li>
             </ul>
+        </div>
         </div>
     );
   }

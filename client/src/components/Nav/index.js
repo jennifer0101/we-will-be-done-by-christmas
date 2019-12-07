@@ -19,7 +19,7 @@ function Nav() {
                                     : "nav-link"
                             }
                         >
-                            Neighborhood Pantry
+                            Home
                     </Link>
                     </li>
                     <li className="nav-item">

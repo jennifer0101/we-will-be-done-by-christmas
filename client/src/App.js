@@ -5,6 +5,8 @@ import search from "./pages/search";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 
+
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
 
