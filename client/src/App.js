@@ -1,13 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import home from "./pages/home";
 import search from "./pages/search";
 import addItems from "./pages/addItems";
 import inviteFriends from "./pages/inviteFriends";
+import cart from "./pages/cart";
+
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import NavBar from "./components/NavBar";
+import Container from "./components/Container";
+
 import { useAuth0 } from "./react-auth0-spa";
+
 
 
 function App() {
@@ -21,8 +27,7 @@ function App() {
     <Router>
       <div>
         <NavBar />
-
-        { isAuthenticated &&
+        {isAuthenticated &&
           <div>
             <Nav />
             <Wrapper>
@@ -30,11 +35,10 @@ function App() {
               <Route exact path="/search" component={search} />
               <Route exact path="/addItems" component={addItems} />
               <Route exact path="/inviteFriends" component={inviteFriends} />
+              <Route exact path="/cart" component={cart} />
             </Wrapper>
           </div>
         }
-
-       
       </div>
     </Router>
   );
@@ -43,27 +47,3 @@ function App() {
 
 export default App;
 
-
-
-
-// import React, { Component } from "react";
-// import logo from "./logo.svg";
-// import "./App.css";
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h2>Welcome to React</h2>
-//         </div>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
