@@ -17,6 +17,7 @@ import Carousel from "./components/Carousel";
 
 
 
+
 function App() {
   const { isAuthenticated, loading } = useAuth0();
 
@@ -28,7 +29,7 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        { isAuthenticated ?
+        {isAuthenticated &&
           <div>
             <Nav />
             <Wrapper>
@@ -39,14 +40,6 @@ function App() {
               <Route exact path="/cart" component={cart} />
             </Wrapper>
           </div>
-          :
-          <div>
-            <Wrapper>
-              {/* <h1>Login Test</h1> */}
-              <Route exact path="/" component={home} />
-              {/* <Route exact path="/" component={Carousel} /> */}
-            </Wrapper>
-          </div>
         }
       </div>
     </Router>
@@ -55,3 +48,4 @@ function App() {
 
 
 export default App;
+
