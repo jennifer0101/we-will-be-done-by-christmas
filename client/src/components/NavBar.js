@@ -5,12 +5,14 @@ const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
-    <div>
-      {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
-      )}
+    <div className="container">
+      <div>
+        {!isAuthenticated && (
+          <button onClick={() => loginWithRedirect({})}>Log in</button>
+        )}
 
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+      </div>
     </div>
   );
 };
