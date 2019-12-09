@@ -33,6 +33,7 @@ export const Auth0Provider = ({
 
       if (isAuthenticated) {
         const user = await auth0FromHook.getUser();
+        localStorage.setItem("user-test-1", JSON.stringify(user)); // Remove this line when ready to validate this user against database
         setUser(user);
       }
 

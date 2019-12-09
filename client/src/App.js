@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar";
 import Container from "./components/Container";
 
 import { useAuth0 } from "./react-auth0-spa";
+import Carousel from "./components/Carousel";
 
 
 
@@ -27,15 +28,23 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        {isAuthenticated &&
+        { isAuthenticated ?
           <div>
             <Nav />
             <Wrapper>
-              <Route exact path="/" component={home} />
+              {/* <Route exact path="/" component={home} /> */}
               <Route exact path="/search" component={search} />
               <Route exact path="/addItems" component={addItems} />
               <Route exact path="/inviteFriends" component={inviteFriends} />
               <Route exact path="/cart" component={cart} />
+            </Wrapper>
+          </div>
+          :
+          <div>
+            <Wrapper>
+              {/* <h1>Login Test</h1> */}
+              <Route exact path="/" component={home} />
+              {/* <Route exact path="/" component={Carousel} /> */}
             </Wrapper>
           </div>
         }
@@ -46,4 +55,3 @@ function App() {
 
 
 export default App;
-
