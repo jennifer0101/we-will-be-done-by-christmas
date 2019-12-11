@@ -19,6 +19,7 @@ import Carousel from "./components/Carousel";
 
 
 
+
 function App() {
   const { isAuthenticated, loading } = useAuth0();
 
@@ -64,3 +65,4 @@ function App() {
 
 
 export default App;
+
