@@ -7,9 +7,11 @@ import addItems from "./pages/addItems";
 import inviteFriends from "./pages/inviteFriends";
 import cart from "./pages/cart";
 
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
+import NavIn from "./components/NavIn";
+import NavOut from "./components/NavOut";
 import Wrapper from "./components/Wrapper";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import Container from "./components/Container";
 
 import { useAuth0 } from "./react-auth0-spa";
@@ -26,11 +28,15 @@ function App() {
 
   return (
     <Router>
+
       <div>
         {/* <NavBar /> */}
+        
         { isAuthenticated ?
+        <React.Fragment>
+        <NavOut />
           <div>
-            <Nav />
+            {/* <Nav /> */}
             <Wrapper>
               {/* <Route exact path="/" component={home} /> */}
               <Route exact path="/search" component={search} />
@@ -39,15 +45,17 @@ function App() {
               <Route exact path="/cart" component={cart} />
             </Wrapper>
           </div>
+          </React.Fragment>
+
           :
-          <div>
-            <Nav />
+
+          <React.Fragment>
+            <NavIn />
             <Wrapper>
-              {/* <h1>Login Test</h1> */}
-              <Route exact path="/" component={home} />
               {/* <Route exact path="/" component={Carousel} /> */}
+              <Route exact path="/" component={home} />
             </Wrapper>
-          </div>
+          </React.Fragment>
         }
       </div>
     </Router>
