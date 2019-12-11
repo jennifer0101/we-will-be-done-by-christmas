@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useAuth0 } from "../../react-auth0-spa"; // COPIED OVER FROM NAVBAR.JS
 
-function Nav() {
+function NavIn() {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); // COPIED OVER FROM NAVBAR.JS
 
     return (
@@ -31,30 +31,10 @@ function Nav() {
 
 
 
-            <Link className="navbar-brand" to="/">
-                Neighborhood Pantry
-            </Link>
-            <Link 
-                to="/search"
-                className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-            >
-                Search Items
-            </Link>
-            <Link  
-                to="/addItems"
-                className={window.location.pathname === "/addItems" ? "nav-link active" : "nav-link"}
-            >
-                Add Items
-            </Link>
-            <Link  
-                to="/inviteFriends"
-                className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
-            >
-                Invite Friends
-            </Link>
+           
             </div>
         </nav>
     );
 }
 
-export default Nav;
+export default NavIn;

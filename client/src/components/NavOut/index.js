@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useAuth0 } from "../../react-auth0-spa"; // COPIED OVER FROM NAVBAR.JS
 
-function Nav() {
+function NavOut() {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); // COPIED OVER FROM NAVBAR.JS
 
     return (
@@ -57,4 +57,4 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default NavOut;
