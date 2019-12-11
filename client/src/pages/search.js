@@ -1,65 +1,50 @@
-import React, { Component }from "react";
-import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
+import React, { Component } from "react";
+// import Container from "../components/Container";
+// import Row from "../components/Row";
+// import Col from "../components/Col";
 import Card from "../components/Card";
 import Wrapper from "../components/Wrapper";
-import userSeed from "../userSeed.json";
-
+import Form from "../components/Form/form";
+// import userSeed from "../userSeed.json";
+import API from "../utils/API";
 
 class search extends Component {
   state = {
-    userSeed
+    // userSeed
+    value: "",
+    user: []
   };
 
-//Add delete path, from activities 20-Stu_FriendRefactor
- 
-render() {
-  return(
-  <Wrapper>
-    {this.state.userSeed.map(userSeed => (
-      <Card
-        image={userSeed.image}
-        itemName={userSeed.item}
-        amount={userSeed.amount}
-        expiration={userSeed.expiration}
-        takeBy={userSeed.mustTake}
-        note={userSeed.note}
-        contact={userSeed.owner}
-      />
-    ))}
-  </Wrapper>
-  );
-}
+  componentDidMount() {
+    this.searchUser();
+  }
 
+  makeUser = userData => {
+    return {
+      _id: userData.id,
+      image: userData.image,
+      item: userData.item,
+      amount: userData.amount,
+      expiration: userData.expiration,
+      takeBy: userData.takeBy,
+      note: userData.note,
+      contact: userData.contact
+    }
+  }
 
-}
+  searchUser = query => {
+    API.getUser(query)
+      .then(res => this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) }))
+      .catch(err => console.error(err));
+  }
 
-// function home() {
-//   return (
-//     <div>
-//       <Container style={{ marginTop: 30 }}>
-//         <Row>
-//           <Col size="md-12">
-//             <h1>Neighborhood Pantry</h1>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Col size="md-12">
-//             <Card
-//             image="../../images/food07.jpg"
-//             itemName="oranges"
-//             amount="5"
-//             expiration="one week"
-//             takeBy="tomorrow"
-//             note="I bought too many, don't want to see them go to waste."
-//             contact="Jane Doe"
-//             />
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// }
+  render() {
+    console.log(this.state.user)
+    return (
+      <Wrapper>
+        <Card itemName={"p"} />
+      </Wrapper>
+    )};
+  }
 
 export default search;
