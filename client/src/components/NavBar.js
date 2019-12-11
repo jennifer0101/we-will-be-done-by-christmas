@@ -1,11 +1,11 @@
-import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
+// import React from "react"; // ALREADY IN NAV FILE
+// import { useAuth0 } from "../react-auth0-spa"; // COPIED OVER TO NAV
 
-const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+// const NavBar = () => { // SIMILAR TO NAV FILE
+  // const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); // COPIED OVER TO NAV
 
-  return (
-    <div className="container">
+  // return ( // ALREADY IN NAV FILE
+/*     <div className="container">
       <div>
         {!isAuthenticated && (
           <button onClick={() => loginWithRedirect({})}>Log in</button>
@@ -17,4 +17,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBar; */

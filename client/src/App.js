@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
         { isAuthenticated ?
           <div>
             <Nav />
@@ -41,6 +41,7 @@ function App() {
           </div>
           :
           <div>
+            <Nav />
             <Wrapper>
               {/* <h1>Login Test</h1> */}
               <Route exact path="/" component={home} />
