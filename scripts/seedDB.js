@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
-
-
-
+// This file empties the items collection and inserts the items below
 mongoose.connect(
     process.env.MONGODB_URI ||
 
@@ -12,7 +9,7 @@ mongoose.connect(
     "mongodb://localhost/search"
 );
 
-const userSeed =[
+const itemsSeed =[
 {  
     image: "../client/public/images/orangejuice.jpg",
     owner: "Travis",
@@ -61,9 +58,9 @@ const userSeed =[
 ]
 
 
-db.User
+db.Items
     .remove({})
-    .then(() => db.User.collection.insertMany(userSeed))
+    .then(() => db.Items.collection.insertMany(itemsSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

@@ -12,7 +12,7 @@ import NavIn from "./components/NavIn";
 import NavOut from "./components/NavOut";
 import Wrapper from "./components/Wrapper";
 // import NavBar from "./components/NavBar";
-import Container from "./components/Container";
+// import Container from "./components/Container";
 
 import { useAuth0 } from "./react-auth0-spa";
 import Carousel from "./components/Carousel";
