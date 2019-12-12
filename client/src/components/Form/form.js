@@ -1,5 +1,6 @@
 import React from "react";
-// import Wrapper from "../components/Wrapper";
+import API from "../../utils/API"
+// import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 
@@ -18,7 +19,7 @@ class Form extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
+
     handleChange(event) {
         // console.log(event.target.name);
         // console.log(event.target.value);
@@ -27,7 +28,9 @@ class Form extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state);
+      // alert('A name was submitted: ' + this.state);
+      console.log(this.state);
+      API.savedUsers(this.state).then(res => console.log("working"));
       event.preventDefault();
     }
   
@@ -40,26 +43,32 @@ class Form extends React.Component {
             Item Name:
             <input type="text" name="itemName" value={this.state.itemName} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
             Amount of Item:
             <input type="text" name="amountItem" value={this.state.amountItem} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
             Date of Expiration:
             <input type="text" name="expiration" value={this.state.expiration} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
             Must Take By:
             <input type="text" name="takeBy" value={this.state.takeBy} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
             Note:
             <input type="text" name="note" value={this.state.note} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
             Contact:
             <input type="text" name="contact" value={this.state.contact} onChange={this.handleChange} />
           </label>
+          <br></br>
           <input type="submit" value="Submit" />
         </form>
       );
