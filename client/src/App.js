@@ -15,9 +15,7 @@ import Wrapper from "./components/Wrapper";
 // import Container from "./components/Container";
 
 import { useAuth0 } from "./react-auth0-spa";
-
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+//import Carousel from "./components/Carousel";
 
 
 
@@ -53,25 +51,22 @@ function App() {
 
       <div>
         {/* <NavBar /> */}
-        
-        { isAuthenticated ?
-        <React.Fragment>
-        <NavOut />
-          <div>
-            {/* <Nav /> */}
-            <Wrapper>
-              {/* <Route exact path="/" component={home} /> */}
-              <Route exact path="/search" component={search} />
-              <Route exact path="/addItems" component={addItems} />
-              <Route exact path="/inviteFriends" component={inviteFriends} />
-              <Route exact path="/cart" component={cart} />
-            </Wrapper>
-          </div>
+
+        {isAuthenticated
+         ? <React.Fragment>
+            <NavOut />
+            <div>
+              {/* <Nav /> */}
+              <Wrapper>
+                {/* <Route exact path="/" component={home} /> */}
+                <Route exact path="/search" component={search} />
+                <Route exact path="/addItems" component={addItems} />
+                <Route exact path="/inviteFriends" component={inviteFriends} />
+                <Route exact path="/cart" component={cart} />
+              </Wrapper>
+            </div>
           </React.Fragment>
-
-          :
-
-          <React.Fragment>
+          : <React.Fragment>
             <NavIn />
 
             <Slider>
