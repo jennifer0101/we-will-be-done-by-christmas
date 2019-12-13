@@ -19,6 +19,8 @@ import { useAuth0 } from "./react-auth0-spa";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
+import "./components/Slider/style.css";
+
 
 
 
@@ -75,10 +77,17 @@ function App() {
             <NavIn />
 
             <Slider>
-              {slides.map((slide, index) => <div key={index}>
-                <h1>{slide.title}</h1>
-                <h3>{slide.description}</h3>
-              </div>)}
+              {slides.map((slide, index) => 
+                <div
+                  key={index}
+                  className="slider-content"
+                >
+                <div className="inner">
+                  <h1>{slide.title}</h1>
+                  <h3>{slide.description}</h3>
+                </div>
+                </div>
+              )}
             </Slider>
 
             <Wrapper>

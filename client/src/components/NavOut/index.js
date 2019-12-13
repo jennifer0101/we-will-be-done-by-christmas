@@ -7,7 +7,7 @@ function NavOut() {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); // COPIED OVER FROM NAVBAR.JS
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg">
             <div className="container">
 
 
@@ -31,7 +31,7 @@ function NavOut() {
 
 
 
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand NP" to="/">
                 Neighborhood Pantry
             </Link>
             <Link 
