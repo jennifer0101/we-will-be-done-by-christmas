@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // import Col from "../components/Col";
 import Card from "../components/Card";
 import Wrapper from "../components/Wrapper";
-import Form from "../components/Form/form";
+// import Form from "../components/Form/form";
 // import userSeed from "../userSeed.json";
 import API from "../utils/API";
 
@@ -12,34 +12,36 @@ class search extends Component {
   state = {
     // userSeed
     value: "",
-    user: []
+    user: [],
+    items: []
   };
 
   componentDidMount() {
     this.searchUser();
   }
 
-  makeUser = userData => {
+  makeUser = itemsData => {
     return {
-      _id: userData.id,
-      image: userData.image,
-      item: userData.item,
-      amount: userData.amount,
-      expiration: userData.expiration,
-      takeBy: userData.takeBy,
-      note: userData.note,
-      contact: userData.contact
+      _id: itemsData.id,
+      image: itemsData.image,
+      item: itemsData.item,
+      amount: itemsData.amount,
+      expiration: itemsData.expiration,
+      takeBy: itemsData.takeBy,
+      note: itemsData.note,
+      contact: itemsData.contact
     }
   }
-
+//THIS COULD BE OUR BREAK
   searchUser = query => {
+    console.log('i hate plane cheetos');
     API.getUser(query)
-      .then(res => this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) }))
-      .catch(err => console.error(err));
+      .then(res => console.log('loook at meeeeeee', res))
+      .catch(err => console.error('it broke',err));
   }
 
   render() {
-    console.log(this.state.user)
+    console.log('more stuff about CHEEETOS', this.state.user)
     return (
       <Wrapper>
         <Card itemName={"p"} />
@@ -48,3 +50,7 @@ class search extends Component {
   }
 
 export default search;
+
+
+
+// this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) })

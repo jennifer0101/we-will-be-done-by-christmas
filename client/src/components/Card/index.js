@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 
 function Card(props) {
     return (
         <div className="card">
             <div className="img-container">
-                <img src={props.image}/>
+                <img alt="food" src={props.image}/>
         </div>
         <div className="content">
             <ul>

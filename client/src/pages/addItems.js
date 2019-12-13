@@ -3,6 +3,7 @@ import Wrapper from "../components/Wrapper";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Form from "../components/Form/form";
+import Container from "../components/Container";
 
 // handleInputChange = event => {
 //   const name = event.target.name
@@ -33,6 +34,7 @@ import Form from "../components/Form/form";
 function addItems() {
   return (
     <div>
+      <Container>
       <Wrapper style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
@@ -45,6 +47,7 @@ function addItems() {
           {/* </Col> */}
         </Row>
       </Wrapper>
+      </Container>
     </div>
   );
 }
