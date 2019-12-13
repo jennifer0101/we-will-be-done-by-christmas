@@ -15,8 +15,8 @@ import Wrapper from "./components/Wrapper";
 // import Container from "./components/Container";
 
 import { useAuth0 } from "./react-auth0-spa";
-//import Carousel from "./components/Carousel";
-
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 
 
