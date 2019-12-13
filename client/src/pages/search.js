@@ -32,15 +32,16 @@ class search extends Component {
       contact: itemsData.contact
     }
   }
-
+//THIS COULD BE OUR BREAK
   searchUser = query => {
+    console.log('i hate plane cheetos');
     API.getUser(query)
-      .then(res => this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) }))
-      .catch(err => console.error(err));
+      .then(res => console.log('loook at meeeeeee', res))
+      .catch(err => console.error('it broke',err));
   }
 
   render() {
-    console.log(this.state.user)
+    console.log('more stuff about CHEEETOS', this.state.user)
     return (
       <Wrapper>
         <Card itemName={"p"} />
@@ -49,3 +50,7 @@ class search extends Component {
   }
 
 export default search;
+
+
+
+// this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) })
