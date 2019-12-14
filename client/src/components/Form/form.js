@@ -27,7 +27,7 @@ class Form extends React.Component {
     handleSubmit(event) {
       // alert('A name was submitted: ' + this.state);
       console.log(this.state);
-      API.savedItems(this.state).then(res => console.log("working"));
+      API.savedItems(this.state).then(res => console.log("working!!!!", res));
       event.preventDefault();
     }
   

@@ -4,6 +4,8 @@ const itemsController = require("../../controllers/itemsController.js");
 // Matches with "/api/user"
 router.route("/")
   .post(itemsController.create)
+  // .get((req, res) => res.json([4,5,6]))
+  .get(itemsController.findById)
 
 
   // write the fake data as an array or obj or whatever
