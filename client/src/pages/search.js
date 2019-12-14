@@ -16,7 +16,10 @@ class search extends Component {
 
   componentDidMount() {
     API.getItems()
-      .then(res => this.setState({ displayedItems: res.data }))
+      .then(res => {
+        console.log(res);
+        //this.setState({ displayedItems: res.data });
+      })
       .catch(err => console.log(err))
   }
 
@@ -24,7 +27,7 @@ class search extends Component {
     // console.log('more stuff about CHEEETOS', this.state.user)
     return (
       <Container>
-        <Card displayedItems={this.state.displayedItems} />
+        <Card items={this.state.displayedItems} />
       </Container>
     )};
   }

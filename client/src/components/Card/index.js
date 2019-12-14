@@ -5,6 +5,9 @@ import API from "../../utils/API";
 // import Col from "../components/Col";
 
 class Card extends Component {
+    constructor(props){
+        super(props);
+    }
 
     state = {
         savedItems: []
@@ -19,11 +22,12 @@ class Card extends Component {
     render() {
         return (
             <div>
-                {!this.props.books.length ? (
+                {!this.props.items ? (
                     <h1 className="text-center">No Results to Display</h1>
                 ) : (
                         <div>
-                            {this.props.items.map(result => (
+                            {this.props.items
+                            /* {this.props.items.map(result => (
                                 <div className="card-body" key={result._id}>
                                     <ul>
                                         <li>
@@ -46,7 +50,7 @@ class Card extends Component {
                                         </li>
                                     </ul>
                                 </div>
-                            ))}
+                            ))} */}
                         </div>
                     )}
             </div>
