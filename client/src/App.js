@@ -15,6 +15,8 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
 import "./components/Slider/style.css";
+import "./components/Slider/slider-animation.css";
+
 
 function App() {
   const { isAuthenticated, loading } = useAuth0();
@@ -81,10 +83,10 @@ function App() {
                   key={index}
                   className="slider-content"
                 >
-                  <div className="inner">
-                    <h1>{slide.title}</h1>
-                    <h3>{slide.description}</h3>
-                  </div>
+                <div className="inner">
+                  <h1 className="slide-title">{slide.title}</h1>
+                  <h3>{slide.description}</h3>
+                </div>
                 </div>
               )}
             </Slider>
