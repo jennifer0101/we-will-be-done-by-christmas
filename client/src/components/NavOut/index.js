@@ -10,10 +10,6 @@ function NavOut() {
         <nav className="navbar navbar-expand-lg">
             <div className="container">
 
-
-
-
-
             {/* COPIED OVER FROM NAVBAR.JS */}
 
             <div className="container">
@@ -26,13 +22,8 @@ function NavOut() {
                 </div>
             </div>
 
-
-
-
-
-
             <Link className="navbar-brand NP" to="/">
-                Neighborhood Pantry
+                Home
             </Link>
             <Link 
                 to="/search"
@@ -46,12 +37,12 @@ function NavOut() {
             >
                 Add Items
             </Link>
-            <Link  
+            {/* <Link  
                 to="/inviteFriends"
                 className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
             >
                 Invite Friends
-            </Link>
+            </Link> */}
             </div>
         </nav>
     );

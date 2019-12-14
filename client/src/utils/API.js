@@ -1,11 +1,11 @@
 import axios from "axios";
 
 export default {
-  // getUser: function () {
-  //   return axios.get("/api/items")
-  // },
+  getItems: function () {
+    return axios.get("/api/items")
+  },
   // Get the saved a user items from the database
-  savedUsers: function (itemsData) {
+  savedItems: function (itemsData) {
     return axios.post("/api/items", itemsData).then(result => result.data);
   },
   // Deletes the user items with the given id
