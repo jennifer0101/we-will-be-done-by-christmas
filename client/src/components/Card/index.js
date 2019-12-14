@@ -26,15 +26,14 @@ class Card extends Component {
                     <h1 className="text-center">No Results to Display</h1>
                 ) : (
                         <div>
-                            {this.props.items
-                            /* {this.props.items.map(result => (
+                            {this.props.items.map(result => (
                                 <div className="card-body" key={result._id}>
                                     <ul>
                                         <li>
                                             <strong>Item Name: {result.itemName}</strong>
                                         </li>
                                         <li>
-                                            <strong>Amount of Item: {result.amount}</strong>
+                                            <strong>Amount of Item: {result.amountItem}</strong>
                                         </li>
                                         <li>
                                             <strong>Date of Expiration: {result.expiration}</strong>
@@ -50,7 +49,7 @@ class Card extends Component {
                                         </li>
                                     </ul>
                                 </div>
-                            ))} */}
+                            ))}
                         </div>
                     )}
             </div>
