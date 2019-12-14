@@ -1,12 +1,9 @@
 const router = require("express").Router();
-const itemsController = require("../../controllers/itemsController");
+const itemsController = require("../../controllers/itemsController.js");
 
 // Matches with "/api/user"
 router.route("/")
-  .post(() => {
-    console.log('have a seat, lets talk about this ya stupid api');
-    itemsController.create();
-  })
+  .post(itemsController.create)
 
 
   // write the fake data as an array or obj or whatever

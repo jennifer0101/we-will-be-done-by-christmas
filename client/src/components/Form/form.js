@@ -1,8 +1,5 @@
 import React from "react";
 import API from "../../utils/API"
-// import Container from "../components/Container";
-// import Row from "../components/Row";
-// import Col from "../components/Col";
 
 class Form extends React.Component {
     constructor(props) {
@@ -30,7 +27,7 @@ class Form extends React.Component {
     handleSubmit(event) {
       // alert('A name was submitted: ' + this.state);
       console.log(this.state);
-      API.savedUsers(this.state).then(res => console.log("working"));
+      API.savedItems(this.state).then(res => console.log("working"));
       event.preventDefault();
     }
   

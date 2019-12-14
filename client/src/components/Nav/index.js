@@ -10,10 +10,6 @@ function Nav() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
 
-
-
-
-
             {/* COPIED OVER FROM NAVBAR.JS */}
 
             <div className="container">
@@ -26,13 +22,8 @@ function Nav() {
                 </div>
             </div>
 
-
-
-
-
-
             <Link className="navbar-brand" to="/">
-                Neighborhood Pantry
+                Home
             </Link>
             <Link 
                 to="/search"

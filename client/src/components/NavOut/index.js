@@ -7,12 +7,8 @@ function NavOut() {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); // COPIED OVER FROM NAVBAR.JS
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg">
             <div className="container">
-
-
-
-
 
             {/* COPIED OVER FROM NAVBAR.JS */}
 
@@ -26,13 +22,8 @@ function NavOut() {
                 </div>
             </div>
 
-
-
-
-
-
-            <Link className="navbar-brand" to="/">
-                Neighborhood Pantry
+            <Link className="navbar-brand NP" to="/">
+                Home
             </Link>
             <Link 
                 to="/search"
@@ -46,12 +37,12 @@ function NavOut() {
             >
                 Add Items
             </Link>
-            <Link  
+            {/* <Link  
                 to="/inviteFriends"
                 className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
             >
                 Invite Friends
-            </Link>
+            </Link> */}
             </div>
         </nav>
     );

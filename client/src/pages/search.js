@@ -1,51 +1,31 @@
 import React, { Component } from "react";
-// import Container from "../components/Container";
+import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
-import Card from "../components/Card";
-import Wrapper from "../components/Wrapper";
-// import Form from "../components/Form/form";
-// import userSeed from "../userSeed.json";
 import API from "../utils/API";
+// import { Link } from "react-router-dom";
+import Card from "../components/Card";
 
 class search extends Component {
   state = {
     // userSeed
-    value: "",
-    user: [],
-    items: []
+    displayedItems: [],
+    // error: "",
+    // message: ""
   };
 
   componentDidMount() {
-    this.searchUser();
-  }
-
-  makeUser = itemsData => {
-    return {
-      _id: itemsData.id,
-      image: itemsData.image,
-      item: itemsData.item,
-      amount: itemsData.amount,
-      expiration: itemsData.expiration,
-      takeBy: itemsData.takeBy,
-      note: itemsData.note,
-      contact: itemsData.contact
-    }
-  }
-//THIS COULD BE OUR BREAK
-  searchUser = query => {
-    console.log('i hate plane cheetos');
-    API.getUser(query)
-      .then(res => console.log('loook at meeeeeee', res))
-      .catch(err => console.error('it broke',err));
+    API.getItems()
+      .then(res => this.setState({ displayedItems: res.data }))
+      .catch(err => console.log(err))
   }
 
   render() {
-    console.log('more stuff about CHEEETOS', this.state.user)
+    // console.log('more stuff about CHEEETOS', this.state.user)
     return (
-      <Wrapper>
-        <Card itemName={"p"} />
-      </Wrapper>
+      <Container>
+        <Card displayedItems={this.state.displayedItems} />
+      </Container>
     )};
   }
 
