@@ -3,22 +3,19 @@ const Schema = mongoose.Schema;
 
 
 const itemsSchema = new Schema({
-    // _id: { 
-    //     type: String, 
-    // },
-    owner: { 
+    contact: { 
         type: String, 
     },
-    item: { 
+    itemName: { 
         type: String, 
     },
-    amount: { 
+    amountItem: { 
         type: String, 
     },
     expiration: { 
         type: String, 
     },
-    mustTake: { 
+    takeBy: { 
         type: String,
      },
     note: { 

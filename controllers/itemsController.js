@@ -5,7 +5,7 @@ module.exports = {
   findAll: function(req, res) {
     // console.log("look here", req.body);
     db.Items
-      .find(req.query)
+      .find()
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => {
@@ -15,13 +15,13 @@ module.exports = {
   },
   findById: function(req, res) {
     console.log("look here", req.body);
-    // db.Items
-    //   .findById(req.params.id)
-    //   .then(dbModel => res.json(dbModel))
-    //   .catch(err => {
-    //     console.error(err)
-    //     res.status(422).json(err)
-    //   });
+    db.Items
+      .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => {
+        console.error(err)
+        res.status(422).json(err)
+      });
   },
   create: function(req, res) {
     db.Items

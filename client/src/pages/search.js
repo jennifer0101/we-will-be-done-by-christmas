@@ -18,7 +18,7 @@ class search extends Component {
     API.getItems()
       .then(res => {
         console.log(res);
-        //this.setState({ displayedItems: res.data });
+        this.setState({ displayedItems: res.data });
       })
       .catch(err => console.log(err))
   }
