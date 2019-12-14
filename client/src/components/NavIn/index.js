@@ -10,10 +10,6 @@ function NavIn() {
         <nav className="navbar navbar-expand-lg">
             <div className="container">
 
-
-
-
-
             {/* COPIED OVER FROM NAVBAR.JS */}
 
             <div className="container">
@@ -26,12 +22,6 @@ function NavIn() {
                 </div>
             </div>
 
-
-
-
-
-
-           
             </div>
         </nav>
     );
