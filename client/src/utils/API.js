@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   getItems: function () {
-    return axios.get("/api/items")
+    return axios.get("/api/items/");
   },
   // Get the saved a user items from the database
   savedItems: function (itemsData) {

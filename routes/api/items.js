@@ -1,9 +1,15 @@
 const router = require("express").Router();
 const itemsController = require("../../controllers/itemsController.js");
 
-// Matches with "/api/user"
-router.route("/")
+// Matches with "/api/items"
+router
+  .route("/")
   .post(itemsController.create)
+  .get(itemsController.findAll)
+  // .put(itemsController.update)
+  // .delete(itemsController.remove);
+
+
 
 
   // write the fake data as an array or obj or whatever
@@ -12,12 +18,11 @@ router.route("/")
 
 
 
-  // .post(itemsController.create);
 
 // Matches with "/api/user/:id"
-// router
-//   .route("/:id")
-//   .get(itemsController.findById)
+router
+  .route("/:id")
+  .get(itemsController.findById)
 //   .put(itemsController.update)
 //   .delete(itemsController.remove);
 

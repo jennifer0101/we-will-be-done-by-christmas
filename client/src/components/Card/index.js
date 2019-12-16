@@ -5,6 +5,9 @@ import API from "../../utils/API";
 // import Col from "../components/Col";
 
 class Card extends Component {
+    constructor(props){
+        super(props);
+    }
 
     state = {
         savedItems: []
@@ -19,7 +22,7 @@ class Card extends Component {
     render() {
         return (
             <div>
-                {!this.props.books.length ? (
+                {!this.props.items ? (
                     <h1 className="text-center">No Results to Display</h1>
                 ) : (
                         <div>
@@ -30,7 +33,7 @@ class Card extends Component {
                                             <strong>Item Name: {result.itemName}</strong>
                                         </li>
                                         <li>
-                                            <strong>Amount of Item: {result.amount}</strong>
+                                            <strong>Amount of Item: {result.amountItem}</strong>
                                         </li>
                                         <li>
                                             <strong>Date of Expiration: {result.expiration}</strong>
