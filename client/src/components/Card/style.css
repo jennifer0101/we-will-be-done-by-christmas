@@ -1,24 +1,25 @@
-.card {
-    background-size: cover;
-    background-position: center;
-    background-clip: content-box;
-    border: 6px solid white;
-    height: 425px;
-    width: 400px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    position: relative;
-    margin: 0 auto;
-    margin-top: 30px;
-    
-  }
-  
-.img-container {
-  margin: 0 auto;
+
+#cardItem {
+  width: 350px;
+  margin-top: 0px;
+  display: flex;
+  flex-flow: row wrap;
   padding: 20px;
-  width: 275px;
-  height: 455px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
 }
 
-.img-container img {
-  width: 100%;
-}
+.card {
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box; 
+  border: 6px solid white;
+  height: 300px;
+  width: 300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+  position: relative; 
+  /* float: left;  */
+  margin: 0 auto; 
+  margin-top: 30px;
+} 
