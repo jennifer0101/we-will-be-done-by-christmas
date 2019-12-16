@@ -9,7 +9,7 @@ function home() {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Neighborhood Pantry</h1>
+            {/* <h1>Neighborhood Pantry</h1> */}
           </Col>
         </Row>
         <Row>

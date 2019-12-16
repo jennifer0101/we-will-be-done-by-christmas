@@ -11,8 +11,9 @@ function NavIn() {
             <div className="container">
 
             {/* COPIED OVER FROM NAVBAR.JS */}
-
-            <div className="container">
+            <h2>Neighborhood Pantry</h2>
+{            <div className="container">
+            
                 <div>
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
@@ -20,7 +21,9 @@ function NavIn() {
                     
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
                 </div>
-            </div>
+            </div>}
+
+            
 
             </div>
         </nav>
