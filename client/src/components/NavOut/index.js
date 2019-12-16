@@ -11,7 +11,7 @@ function NavOut() {
             <div className="container">
 
             {/* COPIED OVER FROM NAVBAR.JS */}
-
+            <h2>Neighborhood Pantry</h2>
             <div className="container">
                 <div>
                     {!isAuthenticated && (

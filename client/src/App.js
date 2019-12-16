@@ -19,10 +19,10 @@ import "./components/Slider/slider-animation.css";
 
 import "react-animated-slider/build/horizontal.css";
 
-import Image1 from './components/Slider/images/trash.jpg';
-import Image2 from './components/Slider/images/food-1560w.jpg';
-import Image3 from './components/Slider/images/family.jpg';
-import Image4 from './components/Slider/images/money.jpg';
+import Image1 from './components/Slider/images/trash1600w.jpg';
+import Image2 from './components/Slider/images/food1600w.jpg';
+import Image3 from './components/Slider/images/people1600w.jpg';
+import Image4 from './components/Slider/images/money1600w.jpg';
 
 
 
@@ -32,7 +32,7 @@ function App() {
   const slides = [
     {
       title: '209 to 254 pounds of edible food',
-      description: 'thrown away per American, per year',
+      description: 'is thrown away per American, per year',
       image: Image1
     },
     {

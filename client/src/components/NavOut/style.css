@@ -5,3 +5,11 @@ nav.navbar.navbar-default {
   .navbar {
     background-color: #01DA20;
   }
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .nav-link {
+    color: white;
+  }

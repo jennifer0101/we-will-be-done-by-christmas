@@ -5,3 +5,8 @@ nav.navbar.navbar-default {
   .navbar {
     background-color: #01DA20;
   }
+
+  h2 {
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
