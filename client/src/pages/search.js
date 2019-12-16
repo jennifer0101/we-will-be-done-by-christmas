@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Container from "../components/Container";
+import API from "../utils/API";
+import Card from "../components/Card";
+import Wrapper from "../components/Wrapper";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
-import API from "../utils/API";
-// import { Link } from "react-router-dom";
-import Card from "../components/Card";
 
 class search extends Component {
   state = {
@@ -24,16 +24,13 @@ class search extends Component {
   }
 
   render() {
-    // console.log('more stuff about CHEEETOS', this.state.user)
     return (
       <Container>
+        <Wrapper>
         <Card items={this.state.displayedItems} />
+        </Wrapper>
       </Container>
     )};
   }
 
 export default search;
-
-
-
-// this.setState({ user: res.data.items.map(userData => this.makeUser(userData)) })
