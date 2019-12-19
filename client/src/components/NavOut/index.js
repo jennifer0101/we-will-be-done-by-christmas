@@ -37,6 +37,12 @@ function NavOut() {
             >
                 Add Items
             </Link>
+            <Link  
+                to="/cart"
+                className={window.location.pathname === "/cart" ? "nav-link active" : "nav-link"}
+            >
+                {<i className="material-icons"> add_shopping_cart </i>} Cart
+            </Link>
             {/* <Link  
                 to="/inviteFriends"
                 className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
@@ -44,7 +50,7 @@ function NavOut() {
                 Invite Friends
             </Link> */}
             </div>
-        </nav>
+        </nav> 
     );
 }
 
