@@ -14,12 +14,28 @@
   background-size: cover;
   background-position: center;
   background-clip: content-box; 
-  border: 6px solid white;
-  height: 300px;
+  border: 2px solid white;
+  height: 350px;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
   position: relative; 
-  /* float: left;  */
   margin: 0 auto; 
   margin-top: 30px;
 } 
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #f6a912;
+}
+
+.btn-outline-secondary {
+  top: 300px;
+  left: 150px;
+  position: absolute;
+}
