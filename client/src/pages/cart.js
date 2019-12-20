@@ -5,6 +5,7 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Wrapper from "../components/Wrapper";
 import Card from "../components/Card";
+import "../index.css";
 
 
 class cart extends Component {
@@ -40,12 +41,12 @@ class cart extends Component {
       <Container>
         <Row>
           <Col size="md-12">
-            <h1><i className="material-icons"> add_shopping_cart </i> Cart</h1>
+            <h1><i className="material-icons">add_shopping_cart</i>Cart</h1>
           </Col>
         </Row>
         <Wrapper>
        
-        <Card items={this.state.saved} hasCartButton="yes">
+        <Card items={this.state.saved} hasContactButton="yes" hasDeleteButton="yes">
         </Card>
         
           

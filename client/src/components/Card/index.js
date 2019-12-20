@@ -34,9 +34,9 @@ class Card extends Component {
                                     <p className="card-text"><strong>Amount of Item: {result.amountItem}</strong></p>
                                     <p className="card-text"><strong>Contact: {result.contact}</strong></p>
                                     
-                                    {this.props.hasCartButton==="yes" ? <button type="button" onClick={()=>this.loadToCart(result)} className="btn btn-outline-secondary btn-sm" id={result._id}>Add to Cart</button> : <p></p>}
-                                    {this.props.hasDeleteButton==="yes" ? <button type="button" className="btn btn-outline-secondary btn-sm"id={result._id}>Delete</button> : <p></p>}
-                                    {this.props.hasPendingButton==="yes" ? <button type="button" className="btn btn-outline-secondary btn-sm"id={result._id}>Pending Pickup</button> : <p></p>}
+                                    {this.props.hasCartButton==="yes" ? <button type="button" onClick={()=>this.loadToCart(result)} className="cartbtn btn btn-outline-secondary btn-sm" id={result._id}>Add to Cart</button> : <p></p>}
+                                    {this.props.hasDeleteButton==="yes" ? <button type="button" className="deletebtn btn btn-outline-secondary btn-sm"id={result._id}>Delete</button> : <p></p>}
+                                    {this.props.hasContactButton==="yes" ? <button type="button" className="contactbtn btn btn-outline-secondary btn-sm"id={result._id}>Contact</button> : <p></p>}
 
                                 </div>
                                 {/* <div className="card-footer bg-transparent border-success"> */}

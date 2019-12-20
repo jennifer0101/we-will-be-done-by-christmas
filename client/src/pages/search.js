@@ -4,6 +4,9 @@ import API from "../utils/API";
 import Card from "../components/Card";
 import Container from "../components/Container";
 import Wrapper from "../components/Wrapper";
+import Row from "../components/Row";
+import Col from "../components/Col";
+import "../index.css";
 
 class search extends Component {
   constructor(props){
@@ -45,6 +48,11 @@ class search extends Component {
   render() {
     return (
       <Container>
+        <Row>
+          <Col size="md-12">
+            <h1 id="searchitems">Search for Items in the Pantry</h1>
+          </Col>
+        </Row>
         <Wrapper>
         <Card items={this.state.displayedItems} addToCart={this.addToCart} hasCartButton="yes">
         </Card>

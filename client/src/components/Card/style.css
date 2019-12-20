@@ -38,8 +38,20 @@ hr {
   color: #f6a912;
 }
 
-.btn-outline-secondary {
+.cartbtn {
   top: 300px;
   left: 150px;
+  position: absolute;
+}
+
+.deletebtn {
+  top: 300px;
+  left: 191px;
+  position: absolute;
+}
+
+.contactbtn {
+  top: 300px;
+  left: 15px;
   position: absolute;
 }
