@@ -1,4 +1,14 @@
 .submitBtn {
     position: relative;
-top: 20px;
+    top: 20px;
+    left: 430px;
+}
+
+form {
+    padding-top: 75px;
+    margin: 0 auto;
+}
+
+input {
+    width: 500px;
 }

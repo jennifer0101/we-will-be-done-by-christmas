@@ -85,7 +85,9 @@ function App() {
               {/* <Testimonial /> */}
 
               <Switch>
-                <Route exact path="/" component={home} />
+                <Route exact path="/" component={home}>
+                  <Testimonial />
+                </Route> 
                 <Route exact path="/search" component={search} />
                 <Route exact path="/addItems" component={addItems} />
                 <Route exact path="/inviteFriends" component={inviteFriends} />
