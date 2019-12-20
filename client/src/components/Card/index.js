@@ -31,7 +31,7 @@ class Card extends Component {
                                     <p className="card-text"><strong>Amount of Item: {result.amountItem}</strong></p>
                                     <p className="card-text"><strong>Date of Expiration: {result.expiration}</strong></p>
                                     <p className="card-text"><strong>Note: {result.note}</strong></p>
-                                    <p className="card-text"><strong>Amount of Item: {result.amountItem}</strong></p>
+                                    <p className="card-text"><strong>Must Take By: {result.takeBy}</strong></p>
                                     <p className="card-text"><strong>Contact: {result.contact}</strong></p>
 
                                     {this.props.hasCartButton === "yes" ? <button type="button" onClick={() => this.loadToCart(result)} className="cartbtn btn btn-outline-secondary btn-sm" id={result._id}>Add to Cart</button> : <p></p>}
