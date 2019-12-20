@@ -30,8 +30,15 @@ function NavOut() {
             >
                 Add Items
             </Link>
+            
+            <Link  
+                to="/cart"
+                className={window.location.pathname === "/cart" ? "nav-link active" : "nav-link"}
+            >
+                {<i className="material-icons"> add_shopping_cart </i>} Cart
+            </Link>
             {/* <div className="container"> */}
-                <div>
+            <div>
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
                     )}

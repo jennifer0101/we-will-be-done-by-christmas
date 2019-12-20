@@ -1,19 +1,26 @@
 import React, { Component } from "react";
-import Container from "../components/Container";
+// import Form from "../components/Form";
 import API from "../utils/API";
 import Card from "../components/Card";
+import Container from "../components/Container";
 import Wrapper from "../components/Wrapper";
-// import Row from "../components/Row";
-// import Col from "../components/Col";
 
 class search extends Component {
-  state = {
-    // userSeed
+  constructor(props){
+    super(props);
+  
+  this.state = {
     displayedItems: [],
-    // error: "",
-    // message: ""
+    error: "",
+    message: "",
+    itemsToCart: [],
   };
 
+  this.addToCart=this.addToCart.bind(this);
+  }
+
+
+  
   componentDidMount() {
     API.getItems()
       .then(res => {
@@ -23,11 +30,24 @@ class search extends Component {
       .catch(err => console.log(err))
   }
 
+  addToCart(items) {
+    console.log("items", items);
+    API.userItemsToCart(items)
+      .then(res => {
+        console.log(res, "working at addtocart");
+        this.setState({ itemsToCart: items });
+      })
+      .catch(err=>console.log(err))
+  }
+  // API.savedItems(this.state).then(res => console.log("working!!!!", res));
+  // event.preventDefault();
+
   render() {
     return (
       <Container>
         <Wrapper>
-        <Card items={this.state.displayedItems} />
+        <Card items={this.state.displayedItems} addToCart={this.addToCart} hasCartButton="yes">
+        </Card>
         </Wrapper>
       </Container>
     )};

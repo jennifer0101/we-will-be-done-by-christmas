@@ -1,5 +1,7 @@
 import React from "react";
 import API from "../../utils/API"
+import "./formstyle.css";
+// import axios from "axios";
 
 class Form extends React.Component {
     constructor(props) {
@@ -65,7 +67,9 @@ class Form extends React.Component {
             <input type="text" name="contact" value={this.state.contact} onChange={this.handleChange} />
           </label>
           <br></br>
-          <input type="submit" value="Submit" />
+          <button type="submit" className="submitBtn btn btn-outline-secondary btn-sm " onClick={this.handleSubmit}>
+              Submit
+          </button>
         </form>
       );
     }
