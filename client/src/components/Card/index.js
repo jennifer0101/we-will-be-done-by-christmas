@@ -12,6 +12,7 @@ class Card extends Component {
     }
 
     loadToCart(items) {
+        delete items._id;
         // console.log(this.props);
         // console.log(items, "look here");
        this.props.addToCart(items);
