@@ -1,9 +1,10 @@
-.card {
+.blue-grey {
     color: orange;
     height: 430px;
+    margin: 16px;
 }
 
-.card-content {
+.white-text {
     padding: 20px;
     border-style: solid;
     border-width: 5px;
@@ -27,6 +28,7 @@ h3 {
 }
 .quote {
     color: black;
+    height: 139px;
 }
 
 .name {
