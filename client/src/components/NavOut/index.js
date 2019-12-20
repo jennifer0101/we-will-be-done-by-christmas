@@ -10,56 +10,42 @@ function NavOut() {
         <nav className="navbar navbar-expand-lg">
             <div className="container">
 
-            {/* COPIED OVER FROM NAVBAR.JS */}
-            <Link>
-            <h2 className="logo">Neighborhood Pantry</h2>
+                <Link
+                    to="/"
+                    className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                >
+                    <h2 className="logo">Neighborhood Pantry</h2>
+            </Link>
+                <Link
+                    to="/search"
+                    className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+                >
+                    Search Items
+            </Link>
+                <Link
+                    to="/addItems"
+                    className={window.location.pathname === "/addItems" ? "nav-link active" : "nav-link"}
+                >
+                    Add Items
             </Link>
 
-            {/* <span className="links"> */}
-            {/* <Link className="navbar-brand NP" to="/">
-                Home
-            </Link> */}
-            <Link 
-                to="/search"
-                className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-            >
-                Search Items
+                <Link
+                    to="/cart"
+                    className={window.location.pathname === "/cart" ? "nav-link active" : "nav-link"}
+                >
+                    {<i className="material-icons"> add_shopping_cart </i>} Cart
             </Link>
-            <Link  
-                to="/addItems"
-                className={window.location.pathname === "/addItems" ? "nav-link active" : "nav-link"}
-            >
-                Add Items
-            </Link>
-            
-            <Link  
-                to="/cart"
-                className={window.location.pathname === "/cart" ? "nav-link active" : "nav-link"}
-            >
-                {<i className="material-icons"> add_shopping_cart </i>} Cart
-            </Link>
-            {/* <div className="container"> */}
-            <div>
+
+                <div>
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
-                    
+
                     {isAuthenticated && <button onClick={() => logout({
                         returnTo: window.location.origin
                     })}>Log out</button>}
                 </div>
-            {/* </div> */}
-            {/* <Link  
-                to="/inviteFriends"
-                className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
-            >
-                Invite Friends
-            </Link> */}
-
-            {/* </span> */}
-
             </div>
-            
         </nav>
     );
 }

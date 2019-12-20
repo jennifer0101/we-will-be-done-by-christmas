@@ -3,6 +3,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Form from "../components/Form/form";
+import Footer from "../components/Footer";
 import "../index.css";
 
 function addItems() {
@@ -15,9 +16,12 @@ function addItems() {
           </Col>
         </Row>
         <Row>
-            <Form />
+          <Form />
         </Row>
       </Container>
+      <React.Fragment>
+        <Footer />
+      </React.Fragment>
     </div>
   );
 }

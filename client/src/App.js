@@ -9,6 +9,7 @@ import cart from "./pages/cart";
 
 import NavIn from "./components/NavIn";
 import NavOut from "./components/NavOut";
+import Footer from "./components/Footer";
 
 import { useAuth0 } from "./react-auth0-spa";
 import Slider from 'react-animated-slider';
@@ -87,10 +88,11 @@ function App() {
               <Switch>
                 <Route exact path="/" component={home}>
                   <Testimonial />
+                  <Footer />
                 </Route> 
                 <Route exact path="/search" component={search} />
                 <Route exact path="/addItems" component={addItems} />
-                <Route exact path="/inviteFriends" component={inviteFriends} />
+                {/* <Route exact path="/inviteFriends" component={inviteFriends} /> */}
                 <Route exact path="/cart" component={cart} />
               </Switch>
             </div>
@@ -111,9 +113,8 @@ function App() {
                 </div>
               )}
             </Slider>
-
             <Testimonial />
-
+            <Footer />
             <Switch>
               {/* <Route exact path="/" component={Carousel} /> */}
               <Route exact path="/" component={home} />
