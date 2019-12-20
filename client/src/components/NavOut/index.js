@@ -11,13 +11,14 @@ function NavOut() {
             <div className="container">
 
             {/* COPIED OVER FROM NAVBAR.JS */}
+            <Link>
             <h2 className="logo">Neighborhood Pantry</h2>
-
+            </Link>
 
             {/* <span className="links"> */}
-            <Link className="navbar-brand NP" to="/">
+            {/* <Link className="navbar-brand NP" to="/">
                 Home
-            </Link>
+            </Link> */}
             <Link 
                 to="/search"
                 className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
