@@ -20,7 +20,7 @@ function NavOut() {
                     to="/search"
                     className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
                 >
-                    Search Items
+                    Search Pantry
             </Link>
                 <Link
                     to="/addItems"
