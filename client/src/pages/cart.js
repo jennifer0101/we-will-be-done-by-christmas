@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Wrapper from "../components/Wrapper";
+import Card from "../components/Card";
 
 
 class cart extends Component {
@@ -18,12 +19,21 @@ class cart extends Component {
   //   .catch(err => console.log(err))
   // }
 
-  //function to remove items by id
-  handleDeleteButton = id => {
-    API.deleteItem(id)
-      .then(res => this.componentDidMount())
+  componentDidMount() {
+    API.getUserItems()
+      .then(res => {
+        console.log(res);
+        this.setState({ saved: res.data });
+      })
       .catch(err => console.log(err))
   }
+
+  //function to remove items by id
+  // handleDeleteButton = id => {
+  //   API.deleteItem(id)
+  //     .then(res => this.componentDidMount())
+  //     .catch(err => console.log(err))
+  // }
 
   render() {
     return (
@@ -34,6 +44,10 @@ class cart extends Component {
           </Col>
         </Row>
         <Wrapper>
+       
+        <Card items={this.state.saved} hasCartButton="yes">
+        </Card>
+        
           
         </Wrapper>
       </Container>

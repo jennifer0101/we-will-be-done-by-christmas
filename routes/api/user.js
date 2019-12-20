@@ -3,6 +3,7 @@ const userController = require("../../controllers/userController.js");
 
 // Matches with "/api/user"
 router.route("/")
+  .get(userController.findAll)
   .post(userController.create)
   
   // .post(userController.create);
