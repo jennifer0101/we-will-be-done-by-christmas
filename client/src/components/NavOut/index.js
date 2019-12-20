@@ -11,17 +11,10 @@ function NavOut() {
             <div className="container">
 
             {/* COPIED OVER FROM NAVBAR.JS */}
-            <h2>Neighborhood Pantry</h2>
-            <div className="container">
-                <div>
-                    {!isAuthenticated && (
-                        <button onClick={() => loginWithRedirect({})}>Log in</button>
-                    )}
-                    
-                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-                </div>
-            </div>
+            <h2 className="logo">Neighborhood Pantry</h2>
 
+
+            {/* <span className="links"> */}
             <Link className="navbar-brand NP" to="/">
                 Home
             </Link>
@@ -37,13 +30,26 @@ function NavOut() {
             >
                 Add Items
             </Link>
+            {/* <div className="container"> */}
+                <div>
+                    {!isAuthenticated && (
+                        <button onClick={() => loginWithRedirect({})}>Log in</button>
+                    )}
+                    
+                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                </div>
+            {/* </div> */}
             {/* <Link  
                 to="/inviteFriends"
                 className={window.location.pathname === "/inviteFriends" ? "nav-link active" : "nav-link"}
             >
                 Invite Friends
             </Link> */}
+
+            {/* </span> */}
+
             </div>
+            
         </nav>
     );
 }

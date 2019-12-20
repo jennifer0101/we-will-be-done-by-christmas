@@ -13,3 +13,11 @@ nav.navbar.navbar-default {
   .nav-link {
     color: white;
   }
+
+  .links {
+    float: right;
+  }
+
+  .logo {
+    white-space: nowrap;
+  }
