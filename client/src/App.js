@@ -29,7 +29,7 @@ import Image4 from './components/Slider/images/money1600w.jpg';
 
 
 function App() {
-  const { isAuthenticated } = useAuth0();
+  const { loading, isAuthenticated } = useAuth0();
 
   const slides = [
     {
@@ -54,9 +54,9 @@ function App() {
     }
   ];
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Router>
