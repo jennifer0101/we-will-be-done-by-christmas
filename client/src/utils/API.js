@@ -19,9 +19,14 @@ export default {
   deleteItem: function (id) {
     return axios.delete("/api/items/" + id).then(result => result.data);
   },
-
+  //Save an item to the user collection
   userItemsToCart: function (itemsToCart) {
     console.log(itemsToCart);
     return axios.post("/api/user", itemsToCart);
-  } 
+  },
+  //Get all items
+  getUserItems: function () {
+    return axios.get("/api/user/");
+},
+
 };

@@ -6,16 +6,15 @@ class Card extends Component {
         super(props);
         this.state ={
             carts: [],
-
         }
+
         this.loadToCart=this.loadToCart.bind(this)
     }
 
     loadToCart(items) {
+        alert ("Your item has been added to the cart.");
         delete items._id;
-        // console.log(this.props);
-        // console.log(items, "look here");
-       this.props.addToCart(items);
+        this.props.addToCart(items);
         console.log(items);
     }
 
