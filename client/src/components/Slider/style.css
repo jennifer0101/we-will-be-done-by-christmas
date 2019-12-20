@@ -43,7 +43,7 @@ button {
     left: 0;
 }
 
-.nextButton {
+/* .nextButton {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -53,9 +53,13 @@ button {
 		height: 32px;
 		text-indent: -9999px;
 		cursor: pointer;
-}
+} */
+
 
 .previousButton {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
   left: 0;
   -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
           transform: rotate(180deg) translateY(calc(50% + 0px));
