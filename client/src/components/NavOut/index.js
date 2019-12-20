@@ -43,7 +43,9 @@ function NavOut() {
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
                     
-                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                    {isAuthenticated && <button onClick={() => logout({
+                        returnTo: window.location.origin
+                    })}>Log out</button>}
                 </div>
             {/* </div> */}
             {/* <Link  
