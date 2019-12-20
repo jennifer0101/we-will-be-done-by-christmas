@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home";
 import search from "./pages/search";
 import addItems from "./pages/addItems";
-import inviteFriends from "./pages/inviteFriends";
+// import inviteFriends from "./pages/inviteFriends";
 import cart from "./pages/cart";
 
 import NavIn from "./components/NavIn";
