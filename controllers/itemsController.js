@@ -1,6 +1,6 @@
 const db = require("../models");
   
-// Defining methods for the userController
+// Defining methods for the itemsController
 module.exports = {
   findAll: function(req, res) {
     db.Items

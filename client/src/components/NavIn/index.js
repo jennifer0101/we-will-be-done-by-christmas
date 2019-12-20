@@ -9,22 +9,18 @@ function NavIn() {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container">
+                {/* COPIED OVER FROM NAVBAR.JS */}
+                <h2 className="logo">Neighborhood Pantry</h2>
+                {<div className="container">
 
-            {/* COPIED OVER FROM NAVBAR.JS */}
-            <h2 className="logo">Neighborhood Pantry</h2>
-{            <div className="container">
-            
-                <div className="login">
-                    {!isAuthenticated && (
-                        <button onClick={() => loginWithRedirect({})}>Log in</button>
-                    )}
-                    
-                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-                </div>
-            </div>}
+                    <div className="login">
+                        {!isAuthenticated && (
+                            <button onClick={() => loginWithRedirect({})}>Log in</button>
+                        )}
 
-            
-
+                        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                    </div>
+                </div>}
             </div>
         </nav>
     );
