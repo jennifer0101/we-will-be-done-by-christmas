@@ -14,6 +14,8 @@ import { useAuth0 } from "./react-auth0-spa";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
+import Testimonial from "./components/Testimonial/index.js"
+
 import "./components/Slider/style.css";
 import "./components/Slider/slider-animation.css";
 
@@ -79,6 +81,9 @@ function App() {
                   </div>
                 )}
               </Slider>
+
+              {/* <Testimonial /> */}
+
               <Switch>
                 <Route exact path="/" component={home} />
                 <Route exact path="/search" component={search} />
@@ -104,6 +109,9 @@ function App() {
                 </div>
               )}
             </Slider>
+
+            <Testimonial />
+
             <Switch>
               {/* <Route exact path="/" component={Carousel} /> */}
               <Route exact path="/" component={home} />

@@ -11,10 +11,10 @@ function NavIn() {
             <div className="container">
 
             {/* COPIED OVER FROM NAVBAR.JS */}
-            <h2>Neighborhood Pantry</h2>
+            <h2 className="logo">Neighborhood Pantry</h2>
 {            <div className="container">
             
-                <div>
+                <div className="login">
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
