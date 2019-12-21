@@ -1,29 +1,31 @@
-# Create React Express App
+# Neighborhood Pantry
 
-## About This Boilerplate
+## Description
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Neighborhood Pantry is a MERN stack application. It is an app that allows users to post food they have that they do not want or that may be close to expiring in order to share with their friends or neighbors. Users can post to the pantry, then search through items in the pantry, and then select which items they want and add them to the cart.     
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Deployment
 
-## Starting the app locally
+Deployed on Heroku (https://we-will-be-done-by-christmas.herokuapp.com "Neighborhood Pantry") 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Technologies Used
 
-```
-npm install
-```
+* MongoDB
 
-This should install node modules within the server and the client folder.
+* Express.js
 
-After both installations complete, run the following command in your terminal:
+* React.js
 
-```
-npm start
-```
+* Node.js
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+* Auth0
 
-## Deployment (Heroku)
+* Bootstrap
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+* Materialize
+
+## Authors
+
+Jean Chapman, Jennifer Faye, Matt Joseph
+
+Date: 12/20/2019
